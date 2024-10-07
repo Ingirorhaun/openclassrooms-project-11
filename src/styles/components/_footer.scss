@@ -1,0 +1,16 @@
+@use "./../base/variables";
+@use "./../utils/mixins";
+
+footer {
+    @include mixins.flex-col;
+
+    background-color: variables.$secondary-color;
+    color: white;
+    align-items: center;
+    height: 209px;
+
+    .logo {
+        width: 122px;
+        padding-top: 66px;
+    }
+}
