@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import AboutUs from './routes/about-us';
 import AccommodationPage, {accommodationPageLoader} from './routes/accommodation';
-import HomePage from './routes';
+import HomePage from './routes/main';
 
 const router = createBrowserRouter([
   {

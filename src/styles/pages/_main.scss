@@ -1,0 +1,22 @@
+@use "./../base/variables";
+@use "./../utils/mixins";
+
+section {
+  &.hero{
+    @include mixins.hero;
+
+    background: rgba(0, 0, 0, 0.6) url("./../../assets/images/cliffs.png");
+    background-position-y: center;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+
+  &.gallery {
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 50px;
+  }
+}
