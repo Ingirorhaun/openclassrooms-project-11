@@ -1,0 +1,16 @@
+@use "./../utils/mixins";
+
+section {
+  &.hero#about-hero {
+    @include mixins.hero;
+    background: rgba(0, 0, 0, 0.3) url("./../../assets/images/mountains.png");
+    background-position-y: center;
+  }
+
+  &#about-content{
+    @include mixins.flex-col;
+
+    align-items: center;
+    gap: 28px;
+  }
+}
