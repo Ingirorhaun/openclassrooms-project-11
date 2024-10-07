@@ -1,0 +1,32 @@
+@use "./../base/variables";
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin hero {
+  $hero-height: 223px;
+
+  height: $hero-height;
+  border-radius: 25px;
+  margin-bottom: 43px;
+  background-size: cover;
+  background-blend-mode: darken;
+
+  h1 {
+    color: variables.$tertiary-color;
+    -webkit-text-stroke: 1px variables.$secondary-color;
+    text-shadow: 0px 4px 4px #00000040;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    line-height: $hero-height;
+    margin: 0;
+  }
+}
