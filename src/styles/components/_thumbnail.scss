@@ -1,0 +1,21 @@
+@use "./../base/variables";
+
+.thumbnail {
+    width: 340px;
+    height: 340px;
+    background-size: cover !important;
+    background-blend-mode: darken;
+    position: relative;
+    border-radius: 10px;
+
+    .title {
+        width: 300px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: variables.$tertiary-color;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 0 20px 20px;
+    }
+}
