@@ -1,0 +1,61 @@
+@use "./../base/variables";
+
+.dropdown {
+  width: 100%;
+  max-width: 1023px;
+
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: variables.$primary-color;
+    color: variables.$tertiary-color;
+    padding: 10px 20px 10px 15px;
+    border-radius: 5px;
+
+    span {
+        display: flex;
+    }
+    
+    button {
+      border: 0;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      svg {
+        transition-duration: 0.5s;
+        transition-property: transform;
+      }
+    }
+  }
+
+  .dropdown-content-wrapper {
+    background-color: #fbfbfb;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease;
+  }
+
+  .dropdown-content {
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  &.open {
+    button {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .dropdown-content-wrapper {
+      grid-template-rows: 1fr;
+      padding: 20px;
+    }
+
+    .dropdown-content {
+        visibility: visible;
+    }
+  }
+}
