@@ -1,0 +1,37 @@
+@use "./../utils/mixins";
+@use "./../base/variables";
+
+.carousel {
+  height: 415px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  .images-wrapper {
+    @include mixins.flex-row;
+    align-items: center;
+
+    transition: 0.5s ease all;
+  }
+
+  .controls {
+    @include mixins.flex-row;
+
+    position: absolute;
+    width: calc(100% - 23.36px * 2);
+    justify-content: space-between;
+    padding: 0 23.36px;
+    cursor: pointer;
+  }
+  .count {
+    position: absolute;
+    bottom: 24.92px;
+    width: 100%;
+    text-align: center;
+    color: variables.$tertiary-color;
+    font-size: 18px;
+  }
+}
