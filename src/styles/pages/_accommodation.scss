@@ -1,0 +1,74 @@
+@use "./../base/variables";
+@use "./../utils/mixins";
+
+.accommodation-info {
+  @include mixins.flex-col;
+
+  gap: 25px;
+  margin-top: 30px;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: variables.$primary-color;
+    margin: 0;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  > div {
+    @include mixins.flex-row;
+
+    justify-content: space-between;
+  }
+
+  .host-info {
+    @include mixins.flex-row;
+
+    align-items: center;
+    gap: 10px;
+
+    h4 {
+      text-align: right;
+      color: variables.$primary-color;
+    }
+
+    img {
+      border-radius: 99%;
+      height: 64px;
+    }
+  }
+
+  .tags {
+    @include mixins.flex-row;
+
+    gap: 10px;
+  }
+
+  .tag {
+    $height: 25px;
+
+    height: $height;
+    padding: 0 30px;
+    border-radius: 10px;
+    background-color: variables.$primary-color;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: $height;
+    color: variables.$tertiary-color;
+  }
+
+  .dropdowns-wrapper {
+    @include mixins.flex-row;
+
+    gap: 76px;
+
+    .dropdown:last-of-type {
+      white-space: pre;
+    }
+  }
+}
