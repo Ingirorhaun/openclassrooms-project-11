@@ -1,0 +1,30 @@
+@use "./../utils/mixins";
+@use "./../base/variables";
+
+header {
+    @include mixins.flex-row;
+
+    max-width: 1240px;
+    margin: 0 auto;
+
+    .logo {
+        height: 68px;
+    }
+    nav {
+        @include mixins.flex-row;
+
+        margin-left: auto;
+        gap: 57px;
+
+        a{
+            font-weight: 500;
+            font-size: 24px;
+            color: variables.$secondary-color;
+            text-decoration: none;
+
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+}
