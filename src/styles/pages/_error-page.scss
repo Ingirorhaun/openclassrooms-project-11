@@ -1,0 +1,30 @@
+@use "./../base/variables";
+@use "./../utils/mixins";
+
+#not-found {
+    @include mixins.flex-col;
+
+    gap: 139px;
+    text-align: center;
+
+    h1,h2 {
+        color: variables.$primary-color;
+    }
+
+    h1 {
+        font-size: 288px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    a {
+        font-size: 18px;
+        font-weight: 500;
+        color: variables.$secondary-color;
+    }
+}
