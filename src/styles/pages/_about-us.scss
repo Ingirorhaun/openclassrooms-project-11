@@ -1,4 +1,6 @@
 @use "./../utils/mixins";
+@use "./../base/variables";
+
 
 section {
   &.hero#about-hero {
@@ -12,5 +14,13 @@ section {
 
     align-items: center;
     gap: 28px;
+  }
+
+  @media screen and (max-width: variables.$breakpoint-mobile) {
+    &#about-content {
+      gap: 20px;
+      margin-bottom: 20px;
+      margin-top: 19px;
+    }
   }
 }

@@ -34,4 +34,31 @@
     color: variables.$tertiary-color;
     font-size: 18px;
   }
+
+  @media screen and (max-width: variables.$breakpoint-mobile) {
+    height: 255px;
+    max-width: 335px;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    .images-wrapper {
+      height: 255px;
+
+      img {
+        min-height: 100%;
+        max-width: 335px;
+        object-fit: cover;
+      }
+    }
+
+    .controls {
+      svg {
+        width: 11.67px;
+      }
+    }
+
+    .count {
+      display: none;
+    }
+  }
 }

@@ -15,9 +15,9 @@
     border-radius: 5px;
 
     span {
-        display: flex;
+      display: flex;
     }
-    
+
     button {
       border: 0;
       background: none;
@@ -55,7 +55,30 @@
     }
 
     .dropdown-content {
-        visibility: visible;
+      visibility: visible;
+    }
+  }
+
+  @media screen and (max-width: variables.$breakpoint-mobile) {
+    max-width: calc(variables.$mobile-max-width - 40px);
+
+    .dropdown-header {
+      font-size: 13px;
+      padding: 7px 10px;
+      span {
+        font-weight: 700;
+      }
+
+      button {
+        svg {
+          width: 16px;
+          height: 9.14px;
+        }
+      }
+    }
+
+    .dropdown-content {
+      font-size: 12px;
     }
   }
 }

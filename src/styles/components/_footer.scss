@@ -11,6 +11,19 @@ footer {
 
     .logo {
         width: 122px;
+        height: 39.44px;
         padding-top: 66px;
+    }
+
+    @media screen and (max-width: variables.$breakpoint-mobile) {
+        max-width: variables.$mobile-max-width;
+        margin: 0 auto;
+
+        p {
+            max-width: 145px;
+            text-align: center;
+            margin: 0 127px;
+            font-size: 12px;
+        }
     }
 }

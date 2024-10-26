@@ -21,10 +21,32 @@ header {
             font-size: 24px;
             color: variables.$secondary-color;
             text-decoration: none;
+            line-height: 68px;
 
             &.active {
                 text-decoration: underline;
             }
         }
     }
+
+    @media screen and (max-width: variables.$breakpoint-mobile) {
+        max-width: calc( variables.$mobile-max-width - 40px);
+
+        .logo {
+            height: 46.88px;
+            width: 145px;
+        }
+
+        nav {
+
+            gap: 26px;
+
+            a {
+                font-size: 12px;
+                line-height: 46.88px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    
 }

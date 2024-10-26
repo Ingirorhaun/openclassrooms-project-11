@@ -1,8 +1,18 @@
+@use "./../base/variables";
+@use "./../base/typography";
+
 body {
   padding-top: 45px;
 
   main {
     max-width: 1240px;
     margin: 50px auto;
+  }
+
+  @media screen and (max-width: variables.$breakpoint-mobile) {
+    main {
+      max-width: variables.$mobile-max-width;
+      margin: 27px auto 7px;
+    }
   }
 }

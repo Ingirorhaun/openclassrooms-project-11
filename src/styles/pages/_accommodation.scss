@@ -31,6 +31,7 @@
 
     align-items: center;
     gap: 10px;
+    margin-top: -6px;
 
     h4 {
       text-align: right;
@@ -47,6 +48,12 @@
     @include mixins.flex-row;
 
     gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .rating {
+    margin-top: 20px;
   }
 
   .tag {
@@ -60,6 +67,8 @@
     font-weight: 700;
     line-height: $height;
     color: variables.$tertiary-color;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .dropdowns-wrapper {
@@ -69,6 +78,66 @@
 
     .dropdown:last-of-type {
       white-space: pre;
+    }
+  }
+
+  @media screen and (max-width: variables.$breakpoint-mobile) {
+    max-width: variables.$mobile-max-width;
+    margin: 0 20px 27px;
+    gap: 13px;
+
+    h1 {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    h4 {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    > div {
+      flex-direction: column;
+
+      > div:last-of-type {
+        @include mixins.flex-row;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+
+    .dropdowns-wrapper {
+      flex-direction: column;
+      gap: 20px;
+
+      .dropdown {
+        display: block;
+        flex-direction: row;
+      }
+    }
+
+    .tag {
+      $height: 18px;
+
+      height: $height;
+      font-size: 10px;
+      line-height: $height;
+      border-radius: 5px;
+      padding: 0 22px;
+    }
+
+    .host-info {
+      flex-wrap: wrap;
+      height: 40px;
+      margin-top: 12px;
+
+      h4 {
+        font-size: 12px;
+      }
+
+      img {
+        height: 32px;
+      }
     }
   }
 }

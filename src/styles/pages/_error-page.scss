@@ -27,4 +27,21 @@
         font-weight: 500;
         color: variables.$secondary-color;
     }
+
+    @media screen and (max-width: variables.$breakpoint-mobile) {
+        margin: 113px auto;
+        gap: 113px;
+        max-width: variables.$mobile-max-width;
+
+        h1 {
+            font-size: 96px;
+        }
+        h2 {
+            font-size: 18px;
+            padding: 0 30px;
+        }
+        a {
+            font-size: 14px;
+        }
+    }
 }

@@ -1,3 +1,10 @@
+@use "./../base/variables";
+
 .star-icon {
     padding: 6px;
+
+    @media screen and (max-width: variables.$breakpoint-mobile) {
+        width: 13px;
+        padding: 2px;
+    }
 }

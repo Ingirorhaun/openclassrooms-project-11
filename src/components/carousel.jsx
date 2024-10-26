@@ -4,7 +4,12 @@ import "./../styles/components/_carousel.scss";
 export default function Carousel({ images, title }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const imagesWrapper = useRef(null);
-  const imageWidth = 1240;
+  let imageWidth = 1240;
+
+  // set imagewidth to 335px if screen width is lower than 1439px
+  if (window.innerWidth < 1439) {
+    imageWidth = 335;
+  }
 
   const prevBtn = (
     <svg
